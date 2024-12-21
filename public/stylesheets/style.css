@@ -1,0 +1,151 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make sure body and html take full height */
+}
+
+body {
+  display: flex;
+  flex-direction: column; 
+   height: 100%;
+}
+
+input {
+  outline: none;
+
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.bg_img {
+  flex: 1; /* Fills the remaining space between header and footer */
+  position: relative; /* For positioning text on the image */
+}
+
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+  filter: blur(0px);
+}
+
+.text-overlay h1{
+  font-weight:900;
+  color:white;
+}
+
+
+
+.text-overlay p{
+  font-weight:600;
+  color:#FCC737;
+}
+
+.image-section {
+  height: calc(100vh - 96px); /* Adjust based on header + footer height */
+  position: relative;
+  overflow:hidden; /* Ensures no overflow from blur */
+  display: flex;
+  align-items: center; /* Centers the image vertically */
+  justify-content: center; /* Optional: centers image horizontally */
+}
+
+/* Add the blur effect to the image */
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px); /* Add blur to the image */
+  transform: scale(1.1); /* Slightly zoom in to hide edges due to blur */
+}
+
+.content {
+  flex: 1;  /* This makes the content area grow and take up available space */
+} 
+
+@media (max-width: 768px) {
+
+  .product-card {
+    max-width: 100%;
+    min-height: 400px;
+  }
+
+  .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+  }
+
+  .card-title, .card-text {
+      font-size: 0.9rem;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  .no-discount {
+    font-style: italic;
+    color: gray;
+}
+
+  .text-overlay h1 {
+      font-size: 1.5rem;
+  }
+
+  .text-overlay p {
+      font-size: 1rem;
+  }
+}
+  
+@media (max-width: 576px) {
+  .text-overlay h1 {
+    font-size: 1.5rem;
+  }
+  .text-overlay p {
+    font-size: 0.8rem;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding-top:5px;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+.product-card {
+  width: 300px;
+  min-height: 400px; /* Ensures all cards have the same height */
+  overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  height: 200px; /* Fixed height for the image */
+  width: auto ; /* Make the image take full width of the card */
+  object-fit: contain; /* Ensures the image covers the area proportionally */
+  border-radius: 8px 8px 0 0; /* Optional: Rounded corners for images */
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.discount {
+  color: red;
+  font-weight: bold;
+} 
+

@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <h2 >Edit Product</h2>
+       
+  
+    <form action="/admin/products/edit/<%=product._id %>" method="POST" class="d-flex flex-column gap-4 mt-2 mt-md-4">
+      <!-- Product Name -->
+      <div class="form-group">
+        <label for="name">Product Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="<%=product.name %>"  required>
+      </div>
+
+      <!-- Price -->
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" name="price"  value="<%=product.price %>" required>
+      </div>
+
+      <!-- Discount -->
+      <div class="form-group">
+        <label for="discount">Discount (%)</label>
+        <input type="number" class="form-control" id="discount" name="discount" value="<%=product.discount %>"  required>
+      </div>
+
+      <!-- Discount -->
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" id="form-group" name="category" value="<%=product.category %>"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">stock</label>
+        <input type="text" class="form-control" id="form-group" name="stock" value="<%=product.stock %>"  required>
+      </div>
+      <!-- Submit Button -->
+       <div class="form-group text-center">
+         <button type="submit" class="btn btn-success ">Update Product</button>
+         <a href="/admin" class="btn btn-secondary">Back to Products</a>
+       </form>
+       </div>
+  </div>
