@@ -26,8 +26,8 @@ Dynamic Content Rendering: Utilize EJS templates to render dynamic HTML.
 * Database: MongoDB
 
 ## Deployment
-Deployed using Render for hosting both the backend and frontend components.
-live at: <a href="https://fullstack-ecommerce-3sc7.onrender.com" target="_main">Web site link</a>
+Deployed using Render for hosting both the backend and frontend components. <br>
+live at: <a href="https://fullstack-ecommerce-3sc7.onrender.com" target="_blank">Web site link</a>
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
